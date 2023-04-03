@@ -34,7 +34,7 @@
 
 ## Illustration
 
-![convertor](./img/converter.png)
+![convertor](./img/convertor.png)
 
 ---
 
