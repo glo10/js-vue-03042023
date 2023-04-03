@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 1</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li>Nom : {{ user.lastName }}</li>
+      <li>Prénom : {{ user.firstName}}</li>
+      <li>Age : {{ user.age }}</li>
+    </ul>
+  </div>
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    createApp({
+      data() {
+        return {
+          user : {
+            firstName : 'Glodie',
+            lastName : 'Tshimini',
+            age: 31
+          }
+        }
+      }
+    }).mount('#app')
+
+  </script>
+</body>
+</html>
