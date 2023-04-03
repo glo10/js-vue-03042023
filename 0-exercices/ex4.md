@@ -25,10 +25,16 @@
 5. Ajoutez le contenu du body HTML et le CSS aux endroits dédiés dans votre composant.
 6. Dans le CSS, supprimez toutes les propriétés `display:none`.
 7. Intégrez et refactorisez progressivemment le JavaScript d'origine dans la partie dédiée au JS de votre composant.
-- Remplacez l'appel les méthodes du DOM (querySelector, getElementById, etc) par les propriétés Vue
+- Remplacez l'appel des méthodes du DOM (querySelector, getElementById, etc) par les propriétés Vue
 - Ajoutez les fonctions dans la partie methods
-- Modifiez les fonctions si nécessaires
-- Ajoutez les événements
+- Modifiez les fonctions si nécessaires par rapport à la logique du framework Vue
+- Ajoutez, associez les événements et les méthodes
+
+---
+
+## Illustration
+
+![convertor](./img/converter.png)
 
 ---
 
@@ -36,3 +42,4 @@
 
 Pour éviter de faire des appels à l'API à chaque requête, stockez les taux en local à l'aide de localStorage.
 N'oubliez pas d'utiliser les fonctions `JSON.parse() et JSON.stringify` pour sérialiser et désérialiser les données.
+
