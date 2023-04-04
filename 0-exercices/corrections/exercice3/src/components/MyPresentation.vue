@@ -63,11 +63,11 @@ export default {
   },
   methods: {
     addTechno() {
-      this.technos.push({id: this.technos.length + 1, label: this.techno})
+      this.technos.push({id: this.technos.length, label: this.techno})
       this.techno = ''
     },
     remove(id) {
-      this.technos.splice(this.technos.indexOf(tech => tech.id == id))
+      this.technos = this.technos.filter(tech => tech.id !== id)
     }
   }
 }
@@ -75,6 +75,6 @@ export default {
 <style scoped>
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 </style>
