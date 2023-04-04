@@ -1,21 +1,15 @@
 <template>
-  <my-presentation />
+  <converter-currency />
 </template>
+
 <script>
-import MyPresentation from '@/components/MyPresentation.vue'
+// @ = /src/
+import ConverterCurrency from '@/components/ConverterCurrency.vue'
+
 export default {
   name: 'App',
   components: {
-    MyPresentation
-  },
-  data() {
-    return {
-      msgs: [
-        'hello vue',
-        'hello vue2',
-        'hello vue 3'
-      ]
-    }
+    ConverterCurrency
   }
 }
 </script>
@@ -25,6 +19,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }

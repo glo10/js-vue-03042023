@@ -1,6 +1,7 @@
 <template>
   <div>
     <main>
+
       <section>
         <h2>Saisie</h2>
         <div>
@@ -13,24 +14,25 @@
           <input type="number" placeholder="Age" v-model="age">
         </div>
         <div>
-          <input v-model="techno" @keyup.enter="addTechno()" type="text" placeholder="Langage ou techno préférée" name="techno">
+          <input v-model="techno" @keyup.enter="addTechno($event)" type="text" placeholder="Langage ou techno préférée" name="techno">
         </div>
         <div>
           <button @click="addTechno" :disabled="techno.length === 0">Ajouter une technologie</button>
         </div>
       </section>
+
       <section v-show="dataExist">
         <h2>Affichage</h2>
         <h3>Identité</h3>
         <p>Nom : {{ lastName }}</p>
         <p>Prénom : {{ firstName }}</p>
         <p v-show="age != 0">{{ over18 }}</p>
-        <div v-show="technos.length > 0">
+        <div v-show="technos.length">
           <h4>Technos préférées</h4>
           <ul>
-            <li v-for="tech in technos" :key="tech">
-              {{ tech }}
-              <button @click="remove(tech)">x</button>
+            <li v-for="tech in technos" :key="tech.id">
+              {{ tech.label }}
+              <button @click="remove(tech.id)">x</button>
             </li>
           </ul>
         </div>
@@ -61,12 +63,18 @@ export default {
   },
   methods: {
     addTechno() {
-      this.technos.push(this.techno)
+      this.technos.push({id: this.technos.length + 1, label: this.techno})
       this.techno = ''
     },
-    remove(name) {
-      this.technos = this.technos.filter(techno => techno !== name)
+    remove(id) {
+      this.technos.splice(this.technos.indexOf(tech => tech.id == id))
     }
   }
 }
 </script>
+<style scoped>
+main {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
