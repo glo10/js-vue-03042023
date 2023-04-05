@@ -1,0 +1,33 @@
+{
+  "users": [
+    "afontcu",
+    "Akryum",
+    "antfu",
+    "bencodezen",
+    "blake-newman",
+    "brc-dd",
+    "cexbrayat",
+    "chrisvfritz",
+    "cuebit",
+    "danielroe",
+    "defcc",
+    "eddyerburgh",
+    "edison1105",
+    "FloEdelmann",
+    "fnlctrl",
+    "gebilaoxiong",
+    "HcySunYang",
+    "HerringtonDarkholme",
+    "hootlex",
+    "javoski",
+    "Jinjiang",
+    "jkzing",
+    "johnsoncodehk",
+    "Justineo",
+    "kazupon",
+    "kiaking",
+    "Kingwl",
+    "ktsn"
+  ],
+  "code": "From vuejs repository/Inside the console/let users = []/document.querySelectorAll('.color-fg-default').forEach(span => users.push((span.innerText)))/console.info(users)/Copy the objet and remove some item"
+}

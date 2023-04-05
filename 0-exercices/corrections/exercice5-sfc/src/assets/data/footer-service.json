@@ -1,0 +1,72 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "label": "Ouvrir un compte",
+      "items": [
+        {
+          "src": "https://api.iconify.design/ri:money-euro-circle-line.svg",
+          "label": "Tarifs",
+          "alt": "Euro currency icon"
+        },
+        {
+          "src": "https://api.iconify.design/material-symbols:money.svg",
+          "label": "Acompte",
+          "alt": "Money icon"
+        },
+        {
+          "src": "https://api.iconify.design/emojione-monotone:money-mouth-face.svg",
+          "label": "Découvert",
+          "alt": "face with money"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Nos partenaires",
+      "items": [
+        {
+          "src": "https://api.iconify.design/material-symbols:home-work-outline-sharp.svg",
+          "label": "GT chez toi",
+          "alt": "Home icon"
+        },
+        {
+          "src": "https://api.iconify.design/material-symbols:directions-car-outline.svg",
+          "label": "GTM car",
+          "alt": "Car icon"
+        },
+        {
+          "src": "https://api.iconify.design/mdi:hamburger.svg",
+          "label": "GM manger",
+          "alt": "Burger icon"
+        },
+        {
+          "src": "https://api.iconify.design/material-symbols:airplane-ticket-outline.svg",
+          "label": "GM Voler",
+          "alt": "Plane icon"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Ma banque",
+      "items": [
+        {
+          "src": "https://api.iconify.design/material-symbols:location-on-outline-rounded.svg",
+          "label": "Trouver une agence",
+          "alt": "Agency icon"
+        },
+        {
+          "src": "https://api.iconify.design/medical-icon:i-social-services.svg",
+          "label": "Nos services",
+          "alt": "Service icon"
+        },
+        {
+          "src": "https://api.iconify.design/ic:round-contact-support.svg",
+          "label": "Nous contacter",
+          "alt": "Contact icon"
+        }
+      ]
+    }
+  ]
+}

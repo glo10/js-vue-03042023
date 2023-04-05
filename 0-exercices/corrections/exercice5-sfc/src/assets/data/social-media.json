@@ -1,0 +1,32 @@
+{
+  "items" : [
+    {
+      "src":"https://api.iconify.design/ic:baseline-facebook.svg",
+      "alt": "Facebook social media icon"
+    },
+    {
+      "src":"https://api.iconify.design/mdi:instagram.svg",
+      "alt": "Instagram social media icon"
+    },
+    {
+      "src":"https://api.iconify.design/mdi:linkedin.svg",
+      "alt": "Linkedin social media icon"
+    },
+    {
+      "src":"https://api.iconify.design/ri:youtube-line.svg",
+      "alt": "Youtube icon"
+    },
+    {
+      "src":"https://api.iconify.design/mdi:twitter.svg",
+      "alt": "Twitter social media icon"
+    },
+    {
+      "src":"https://api.iconify.design/mdi:facebook-messenger.svg",
+      "alt": "Facebook messenger media icon"
+    },
+    {
+      "src":"https://api.iconify.design/ic:baseline-whatsapp.svg",
+      "alt": "Whatsapp icon"
+    }
+  ]
+}
