@@ -1,36 +1,31 @@
 <template>
   <div class="row">
-    <UserCard v-for="user in users" :key="user.login" :user="user" />
+    <loader-data v-if="users.length === 0"/>
+    <transition-group name="fade">
+      <UserCard v-for="user in users" :key="user.login" :user="user" />
+    </transition-group>
   </div>
 </template>
 <script>
-// import { users } from '@/assets/data/users.json'
 import UserCard from '@/components/user/UserCard.vue'
-import {users} from '@/assets/data/github.json'
+import {mapActions, mapGetters} from 'vuex'
+import LoaderData from '@/components/navigation/LoaderData.vue'
 export default {
-  components: {
-    UserCard
-  },
-  data() {
-    return {
-      users
+  created(){
+    if(this.users.length === 0) {
+      this.getUsers()
     }
   },
-    // created() {
-  //   try {
-  //     let i = 0
-  //     for (; i < users.length; i++) {
-  //       fetch(`https://api.github.com/users/${users[i]}`)
-  //         .then(user => user.json())
-  //         .then(user => {
-  //           this.githubUsers.push(user)
-  //         })
-  //     }
-  //   }
-  //   catch (error) {
-  //     console.log('error created userlist component', error)
-  //   }
-  // },
+  components: {
+    UserCard,
+    LoaderData
+  },
+  computed: {
+    ...mapGetters(['users']),
+  },
+  methods: {
+    ...mapActions(['getUsers'])
+  }
 }
 </script>
 <style scoped>
@@ -41,5 +36,14 @@ export default {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 5s ease-in;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -39,9 +39,9 @@ export default [
     props: (route) => ({login: route.params.login}),
     children: [
       {
-      path: '/user/:login/repositories',
-      name: 'repositories',
-      component: () => import('@/views/UserRepositoriesView.vue')
+        path: '/user/:login/repositories',
+        name: 'repositories',
+        component: () => import('@/views/UserRepositoriesView.vue')
       }
     ]
   },

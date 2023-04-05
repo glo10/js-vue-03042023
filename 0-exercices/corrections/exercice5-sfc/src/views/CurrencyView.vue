@@ -2,9 +2,16 @@
   <TheHeader :title="headerTitle" />
   <div class="container-convertor">
     <div class="main-convertor">
-      <TheResult v-show="isSwhoResult" ref="result" />
+      <Transition name="animation-result">
+        <TheResult v-show="isSwhoResult" ref="result" />
+      </Transition>
       <TheAmountForm ref="inputAmount" />
-      <SelectCurrency v-for="label in labels" :label="label" :key="label" @choice-currency="selectedCurrency($event)" />
+      <SelectCurrency
+        v-for="label in labels"
+        :label="label"
+        :key="label"
+        @choice-currency="selectedCurrency($event)"
+      />
       <ConverterBtn v-for="btn in btns" :key="btn.id" :btn="btn"
         v-on="btn.id === 1 ? { 'get-result': getRates } : { 'clear': clearValues }" />
     </div>
@@ -62,6 +69,7 @@ export default {
       switch (payload.origin.toLowerCase()) {
         case 'from':
           this.rateFrom = payload.value
+          this.$store.dispatch('setCurrency', payload.value)
           break
         case 'to':
           this.rateTo = payload.value
@@ -147,6 +155,19 @@ label {
 
 footer p {
   text-align: center;
+}
+
+.animation-result-enter-active {
+  animation: bounce-in 3s;
+}
+.animation-result-leave-active {
+  animation: bounce-in 3s reverse;
+}
+
+@keyframes bounce-in {
+  0% {transform: scale(0);}
+  50% {transform: scale(1.25);}
+  100% {transform: scale(1);}
 }
 
 @media (max-width: 768px) {

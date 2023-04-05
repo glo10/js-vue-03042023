@@ -1,5 +1,5 @@
 <template>
-  <h2>User repositories</h2>
+  <h2>User repositories ({{ repos.length }})</h2>
   <div v-if="!repos.length">
     Aucun repository
   </div>
@@ -42,7 +42,7 @@ ul {
 }
 
 img {
-  width: 10rem;
+  width: 8rem;
 }
 
 li {
@@ -51,7 +51,13 @@ li {
 }
 
 li span {
+  display: inline-block;
+  max-width: 8rem;
+  color: #fff;
+  position: relative;
+  top: 50%;
   text-align: center;
+  padding: 1rem;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <form action="#">
+  <form>
     <input type="text" name="lastName" class="form-control" placeholder="Nom">
     <input type="text" name="firstName" class="form-control" placeholder="Prénom">
     <input type="email" name="email" class="form-control" placeholder="Adresse email">
@@ -13,10 +13,17 @@
     <input type="number" name="deposit" class="form-control" placeholder="Montant premier versement">
     <select class="form-control">
       <option selected value="">Choisir la carte</option>
-      <option value="silver">Silver</option>
-      <option value="black">Black</option>
-      <option value="gold">Gold</option>
+      <option v-for="card in cards" :value="card" :key="card">{{ card }}</option>
     </select>
     <input type="submit" value="Valider">
   </form>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      cards: ['silver', 'black', 'gold']
+    }
+  }
+}
+</script>

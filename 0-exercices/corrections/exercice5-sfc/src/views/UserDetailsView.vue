@@ -6,7 +6,8 @@
     <li class="list-group-item" v-for="(val, k) in user" :key="k">{{ k }} : {{ val }}</li>
   </ul>
   <router-link :to="{ name: 'repositories', params: { login: user.login } }">Voir les repositories</router-link>
-  <router-view :key="$route.path"/>
+  <!--:key="$route.path" force vue to re-render-->
+  <router-view :key="$route.path" />
 </template>
 <script>
 import { users } from '@/assets/data/github.json'
@@ -29,6 +30,12 @@ export default {
 }
 </script>
 <style scoped>
+
+a {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 img {
   width: 250px;
   height: 250px;
@@ -43,14 +50,15 @@ img {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .list-group-item {
   position: relative;
-  display: block;
+  width: 33.33%;
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
   background-color: #fff;

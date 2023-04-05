@@ -3,7 +3,7 @@
     <go-back />
 </template>
 <script>
-import GoBack from '@/components/GoBack.vue'
+import GoBack from '@/components/navigation/GoBack.vue'
 export default {
   components: {
     GoBack
